@@ -23,7 +23,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React + Modern-Redux</h1>
+      <h1>Vite + React + Modern-Redux(2023)</h1>
       <div className="card">
         <button
           style={{ marginRight: "20px" }}
