@@ -18,13 +18,10 @@ function App() {
   const dispatch = useDispatch();
   const [amount, setAmount] = useState("");
 
-  function validateOnlyNumber(input) {
-    const numberPattern = /^[0-9]+$/;
-    return numberPattern.test(input);
-  }
-
-  console.log("typeof num", typeof amount);
-  console.log("amount", amount);
+  const handleReset = () => {
+    setAmount("");
+    dispatch(reset());
+  };
   return (
     <>
       <div>
@@ -49,10 +46,7 @@ function App() {
         >
           Increment
         </button>
-        <button
-          style={{ marginRight: "10px" }}
-          onClick={() => dispatch(reset())}
-        >
+        <button style={{ marginRight: "10px" }} onClick={handleReset}>
           Reset
         </button>
         <button onClick={() => dispatch(multiplyByAmount(2))}>
