@@ -9,15 +9,22 @@ export const counterSlice = createSlice({
     squaringFn: (state) => {
       state.value = state.value ** 2;
     },
-    squareRootFn: (state) => {
-      state.value = Math.sqrt(state.value);
+    increment: (state) => {
+      state.value += 1;
     },
     multiplyByAmount: (state, action) => {
       state.value = state.value * action.payload;
     },
+    incrementByAmount: (state, action) => {
+      state.value = state.value + action.payload;
+    },
+    reset: (state) => {
+      state.value = 0;
+    },
   },
 });
 
-export const { squaringFn, squareRootFn, multiplyByAmount } = counterSlice.actions;
+export const { squaringFn, increment, multiplyByAmount, reset, incrementByAmount } =
+  counterSlice.actions;
 
 export default counterSlice.reducer;
