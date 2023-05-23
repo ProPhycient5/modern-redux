@@ -25,10 +25,10 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vitejs.dev" >
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
+        <a href="https://react.dev">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -63,6 +63,7 @@ function App() {
         <p>
           <code>count is </code> {currentCount}
         </p>
+        <p>👇🏽 This is for  Incremented Amount</p>
         <input
           type="text"
           value={amount}
